@@ -99,31 +99,30 @@ subplot(2,4,2);
 imshow(f1);
 title('Median Filter');
 
-%https://www.mathworks.com/help/images/ref/ordfilt2.html
 %5,ONES(3,3) 3x3 median filter
 f2=ordfilt2(x,5,[1 1 1; 1 1 1; 1 1 1]);
 subplot(2,4,3);
 imshow(f2);
-title('Order-Statistic Filter - Median');
+title('Order-Statistic Filter');
 
 %1,ONES(3,3) 3x3 minimum filter
-f3=ordfilt2(x,1,ones(3,3));
-subplot(2,4,4);
-imshow(f3);
-title('Order-Statistic Filter - Minumum');
+f2=ordfilt2(x,5,[1 1 1; 1 1 1; 1 1 1]);
+subplot(2,4,3);
+imshow(f2);
+title('Order-Statistic Filter');
 
 %9,ONES(3,3) 2x2 max filter
-f4=ordfilt2(x,9,ones(3,3));
-subplot(2,4,5);
-imshow(f4);
-title('Order-Statistic Filter - Maximum');
+f2=ordfilt2(x,5,[1 1 1; 1 1 1; 1 1 1]);
+subplot(2,4,3);
+imshow(f2);
+title('Order-Statistic Filter');
 
-%4,[0 1 0; 1 0 1; 0 1 0] replaces each element in A by the maximum of its north, east, south, and west neighbours.
-f5=ordfilt2(x,4,[0 1 0; 1 0 1; 0 1 0]);
-subplot(2,4,6);
-imshow(f5);
-title('Order-Statistic Filter - All 4 Directions');
-
+%4,[0 1 0; 1 0 1; 0 1 0] replaces each element in A by the maximum of itsnorth, east, south, and west neighbours.
+%https://www.mathworks.com/help/images/ref/ordfilt2.html
+f2=ordfilt2(x,5,[1 1 1; 1 1 1; 1 1 1]);
+subplot(2,4,3);
+imshow(f2);
+title('Order-Statistic Filter');
 
 
 
